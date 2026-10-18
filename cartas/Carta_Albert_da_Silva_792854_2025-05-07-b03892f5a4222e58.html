@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Carta Mensal de Investimentos — Albert da Silva</title>
+<style>
+@page { size: A4; margin: 12mm 0 12mm; }
+@page :first { margin-top: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #fff; }
+body { font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; color: #1F2933; font-size: 9.6pt; line-height: 1.45; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 210mm; padding: 0 16mm 10mm; }
+.band { background: #0B1F3A; color: #fff; margin: 0 -16mm; padding: 9mm 16mm 7mm; display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 3px solid #C9A227; }
+.band .firm { font-size: 8pt; letter-spacing: .18em; text-transform: uppercase; color: #C9A227; font-weight: 600; }
+.band h1 { margin: 2px 0 0; font-size: 17pt; font-weight: 600; letter-spacing: -.01em; }
+.band .meta { text-align: right; font-size: 8.2pt; line-height: 1.55; color: #D6DCE5; }
+.band .meta b { color: #fff; font-weight: 600; }
+.tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; margin: 5mm 0 4mm; }
+.tile { border: 1px solid #E3E7ED; border-top: 3px solid #0B1F3A; border-radius: 4px; padding: 2.6mm 3mm; }
+.tile .k { font-size: 7.4pt; text-transform: uppercase; letter-spacing: .06em; color: #5B6573; }
+.tile .v { font-size: 13.5pt; font-weight: 700; color: #0B1F3A; margin-top: 1px; }
+.tile .s { font-size: 7.4pt; color: #5B6573; }
+p { margin: 0 0 2.4mm; text-align: justify; hyphens: auto; }
+p.date { text-align: right; color: #5B6573; margin-bottom: 3mm; }
+p.salutation { font-weight: 600; margin-bottom: 2mm; }
+h2 { font-size: 11.2pt; color: #0B1F3A; margin: 4.5mm 0 2.2mm; padding-bottom: 1.2mm; border-bottom: 1px solid #E3E7ED; break-after: avoid; page-break-after: avoid; }
+h2::before { content: ""; display: inline-block; width: 3px; height: 11pt; background: #C9A227; margin-right: 2.4mm; vertical-align: -2px; }
+.lead { color: #0B1F3A; }
+.pos { color: #1E7B4F; font-weight: 600; white-space: nowrap; }
+.zero { color: #5B6573; white-space: nowrap; }
+.neg { color: #B3261E; font-weight: 600; white-space: nowrap; }
+.perf-wrap { display: grid; grid-template-columns: 1.15fr 1fr; gap: 5mm; align-items: start; margin: 1mm 0 3.5mm; break-inside: avoid; }
+table.perf { width: 100%; border-collapse: collapse; font-size: 8.8pt; }
+table.perf th { background: #0B1F3A; color: #fff; font-weight: 600; text-align: left; padding: 1.8mm 2mm; font-size: 8pt; }
+table.perf td { padding: 1.7mm 2mm; border-bottom: 1px solid #E3E7ED; }
+table.perf tr:nth-child(even) td { background: #F6F8FA; }
+.r { text-align: right; }
+.chart-title { font-size: 7.6pt; text-transform: uppercase; letter-spacing: .06em; color: #5B6573; margin-bottom: 1.5mm; }
+.item { border-left: 3px solid #C9A227; background: #FBF8EE; padding: 2mm 3mm; margin: 0 0 2mm; border-radius: 0 4px 4px 0; break-inside: avoid; text-align: justify; }
+.item.good { border-left-color: #1E7B4F; background: #EEF6F1; }
+.item-label { font-weight: 700; color: #0B1F3A; font-size: 8.8pt; margin-bottom: .6mm; }
+ul { margin: 0 0 2.4mm; padding-left: 5mm; }
+ol.steps { list-style: none; counter-reset: s; margin: 0 0 3mm; padding: 0; }
+ol.steps li { counter-increment: s; position: relative; padding: 1.2mm 0 1.2mm 8mm; border-bottom: 1px dashed #E3E7ED; }
+ol.steps li::before { content: counter(s); position: absolute; left: 0; top: 1.1mm; width: 5mm; height: 5mm; border-radius: 50%; background: #0B1F3A; color: #fff; font-size: 7.5pt; font-weight: 700; text-align: center; line-height: 5mm; }
+.sign { margin-top: 4mm; break-inside: avoid; }
+.sign .name { margin-top: 7mm; padding-top: 1.5mm; border-top: 1px solid #1F2933; display: inline-block; min-width: 55mm; font-weight: 600; }
+.sign .role { color: #5B6573; font-size: 8.4pt; }
+.disclaimer { margin-top: 5mm; padding-top: 2mm; border-top: 1px solid #E3E7ED; font-size: 7.2pt; color: #5B6573; font-style: italic; text-align: justify; }
+/* ---- Web version (same file works as a website and as a print-ready A4 PDF) ---- */
+.toolbar { display: none; }
+@media screen {
+  body { background: #E9EDF2; font-size: 10.5pt; }
+  .page { margin: 28px auto 40px; background: #fff; box-shadow: 0 6px 24px rgba(11,31,58,.12); border-radius: 6px; overflow: hidden; padding-bottom: 12mm; }
+  .toolbar { display: flex; justify-content: center; gap: 10px; position: sticky; top: 0; z-index: 5; padding: 10px 16px; background: rgba(233,237,242,.92); backdrop-filter: blur(6px); }
+  .toolbar button { font: 600 13px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; color: #fff; background: #0B1F3A; border: 0; border-radius: 6px; padding: 9px 18px; cursor: pointer; }
+  .toolbar button:hover { background: #142f55; }
+}
+@media screen and (max-width: 820px) {
+  .page { width: auto; margin: 0; border-radius: 0; box-shadow: none; padding: 0 16px 24px; }
+  .band { margin: 0 -16px; padding: 20px 16px 16px; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .band .meta { text-align: left; }
+  .tiles { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .perf-wrap { grid-template-columns: 1fr; }
+  table.perf { font-size: 9pt; }
+  p, .item { text-align: left; }
+}
+@media print { .toolbar { display: none !important; } }
+</style></head>
+<body>
+<div class="toolbar"><button type="button" onclick="window.print()">Baixar PDF</button></div>
+<div class="page">
+<header class="band">
+  <div><div class="firm">Assessoria de Investimentos</div><h1>Carta Mensal de Investimentos</h1></div>
+  <div class="meta">Cliente: <b>Albert da Silva</b><br>Conta: <b>792854</b><br>Assessor: <b>Antonio Bicudo</b> (A7699)<br>Período: <b>07/04/2025 a 07/05/2025</b></div>
+</header>
+<section class="tiles"><div class="tile"><div class="k">Patrimônio total</div><div class="v">R$ 386.858,82</div><div class="s">posição em 07/05/2025</div></div><div class="tile"><div class="k">Retorno da carteira</div><div class="v">+5,02%</div><div class="s">07/04/2025 a 07/05/2025</div></div><div class="tile"><div class="k">Ibovespa</div><div class="v">+6,31%</div><div class="s">mesmo período</div></div></section>
+<main><h2>7 de maio de 2025</h2>
+<p>Prezado Albert,</p>
+<p>Espero que esta carta o encontre bem. Estou escrevendo para compartilhar o desempenho da sua carteira de investimentos no período de 7 de abril a 7 de maio de 2025, além de discutir o cenário econômico atual e as sugestões de ajustes que podemos considerar juntos.</p>
+<h2>Como foi o desempenho da sua carteira</h2>
+<p>No período analisado, sua carteira apresentou um retorno total de <span class="pos">+5,02%</span>, o que equivale a 100% do CDI, a referência de rentabilidade da renda fixa. Abaixo, apresento um resumo do desempenho por classe de ativo:</p>
+<div class="perf-wrap"><div class="perf-table"><table class="perf"><thead><tr><th>Classe de Ativo</th><th class="r">Peso</th><th class="r">Retorno no Período</th><th class="r">Contribuição (p.p.)</th></tr></thead><tbody><tr><td>Ações</td><td class="r">19,32%</td><td class="r"><span class="pos">+17,73%</span></td><td class="r"><span class="pos">+3,43 p.p.</span></td></tr><tr><td>Fundos</td><td class="r">67,71%</td><td class="r"><span class="pos">+2,36%</span></td><td class="r"><span class="pos">+1,60 p.p.</span></td></tr><tr><td>Renda Fixa</td><td class="r">12,97%</td><td class="r"><span class="zero">+0,00%</span></td><td class="r"><span class="zero">+0,00 p.p.</span></td></tr></tbody></table></div><div class="perf-chart"><div class="chart-title">Retorno no período vs. referência</div><svg viewBox="0 0 330 52" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif"><text x="0" y="21" font-size="10" font-weight="600" fill="#0B1F3A">Ações</text><rect x="64" y="4" width="208.0" height="13" rx="2" fill="#0B1F3A"/><text x="277" y="14.5" font-size="9.5" fill="#1F2933">+17,73%</text><text x="320.2" y="14.5" font-size="8.5" fill="#5B6573"></text><rect x="64" y="20" width="74.0" height="13" rx="2" fill="#AEB6C2"/><text x="143.02594472645234" y="30.5" font-size="9.5" fill="#1F2933">+6,31%</text><text x="180.62594472645233" y="30.5" font-size="8.5" fill="#5B6573">Ibovespa</text></svg></div></div>
+<p><strong class="lead">Ações:</strong> Sua alocação em ações teve um desempenho notável, com um retorno de <span class="pos">+17,73%</span>, superando o Ibovespa, que subiu <span class="pos">+6,31%</span>. As ações da Lojas Renner (LREN3) se destacaram com um retorno de <span class="pos">+18,56%</span>, contribuindo com <span class="pos">+1,65 p.p.</span> para o desempenho total da carteira. Além disso, a Marfrig (MRFG3) e a Arezzo (ARZZ3) também tiveram desempenhos positivos de <span class="pos">+10,89%</span> e <span class="pos">+30,06%</span>, respectivamente.</p>
+<p><strong class="lead">Fundos:</strong> Os fundos da sua carteira tiveram um retorno de <span class="pos">+2,36%</span> no período. O fundo Truxt Long Bias Advisory FIC FIM foi destaque, com um retorno de <span class="pos">+9,16%</span>, contribuindo com <span class="pos">+0,37 p.p.</span> para o retorno total da carteira. Outros fundos, como o Constellation Institucional Advisory FIC FIA, também apresentaram bons resultados, com um retorno de <span class="pos">+11,91%</span>.</p>
+<p><strong class="lead">Renda Fixa:</strong> A posição de renda fixa não gerou retorno no período, pois o CDB do Banco C6 Consignado S.A. já havia vencido e está atualmente sem render.</p>
+<h2>O cenário econômico e o que ele significa para você</h2>
+<p>De acordo com o relatório Brasil Macro Mensal da XP, de fevereiro de 2025, a inflação continua pressionada, com projeção de IPCA de 6,1% para 2025. Isso impacta diretamente o poder de compra dos seus investimentos. A taxa Selic, atualmente projetada para atingir 15,50% ao final de 2025, reforça a atratividade dos investimentos atrelados ao CDI, que podem ajudar a mitigar os efeitos da inflação elevada.</p>
+<p>A atividade econômica no Brasil está em desaceleração, com previsão de crescimento do PIB de 2,0% para 2025. O mercado de trabalho mostra sinais mistos, com aumento gradual do desemprego, mas com crescimento inesperado dos salários reais. Esses fatores podem influenciar a demanda por produtos e serviços, afetando os resultados de empresas listadas na bolsa.</p>
+<p>No âmbito fiscal, o governo enfrenta desafios para cumprir suas metas, com um déficit primário projetado de 0,6% do PIB em 2025. O cenário fiscal pode impactar a confiança dos investidores e a estabilidade econômica, o que reforça a importância de diversificar suas aplicações.</p>
+<h2>Pontos de atenção e sugestões</h2>
+<div class="item good"><div class="item-label">Positivos</div><div>Destaco o excelente desempenho das suas ações, que retornaram <span class="pos">+17,73%</span> no período, bem acima do Ibovespa.</div></div>
+<div class="item warn"><div class="item-label">Pontos de atenção</div><div></div></div>
+<ul><li><strong>CDB vencido:</strong> Observamos que o CDB do Banco C6 Consignado S.A. venceu e está sem render. Isso importa para o seu perfil, pois o foco é preservar e incrementar marginalmente o poder de compra. <strong>Sugerimos avaliarmos juntos</strong> a situação do vencimento e a realocação dos recursos para instrumentos de renda fixa pós-fixados com emissores com rating de crédito BB+ ou superior.</li><li><strong>Caixa disponível:</strong> Há um montante de R$ 74.672,62 em caixa, representando 19,30% do patrimônio total, não investido. Isso pode impactar o potencial de retorno da sua carteira. <strong>Sugerimos avaliarmos juntos</strong> se há um uso planejado para esse caixa e, caso contrário, considerar sua alocação em renda fixa pós-fixada CDI.</li><li><strong>Concentração em fundos:</strong> O fundo Riza Lotus Plus Advisory FIC FIRF REF DI CP representa 30,81% da carteira investida. Para alinhar com seu perfil moderado, <strong>sugerimos avaliarmos juntos</strong> a qualidade de crédito dos fundos de crédito privado e considerar realocação se não atenderem ao requisito de classificação BB+.</li><li><strong>Ações específicas:</strong> As ações LREN3, ARZZ3 e HAPV3 apresentaram perdas desde a compra, mas ganhos no período. <strong>Sugerimos avaliarmos juntos</strong> se essas empresas ainda se alinham com sua preferência por ações de empresas consolidadas que pagam dividendos.</li></ul>
+<h2>Próximos passos</h2>
+<ol class="steps"><li>Verificar o status de liquidação do CDB vencido e discutir possíveis realocações.</li><li>Avaliar o uso planejado do caixa disponível e considerar alocações em renda fixa.</li><li>Revisar a adequação das ações de LREN3, ARZZ3 e HAPV3 ao seu perfil e preferência.</li></ol>
+<p>Fico à disposição para discutirmos essas sugestões e qualquer outra dúvida que você tenha sobre sua carteira. Vamos agendar uma conversa?</p></main>
+<section class="sign"><div>Atenciosamente,</div><div class="name">Antonio Bicudo</div><div class="role">Código A7699</div></section>
+<footer class="disclaimer">Os retornos passados não garantem resultados futuros; as sugestões devem ser validadas com o assessor e estão sujeitas ao perfil de adequação do cliente.</footer>
+</div></body></html>
